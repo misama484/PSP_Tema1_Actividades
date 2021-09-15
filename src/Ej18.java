@@ -1,3 +1,4 @@
+import java.awt.print.Book;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,6 +17,7 @@ public class Ej18 {
 		int may = 0;
 		String pass;
 		String pass2;
+		Boolean test = false ;
 		
 		do {
 		System.out.println("Introduzca Password (minimo 5 caracteres, 1 numero y 1 mayuscula): ");
@@ -26,13 +28,12 @@ public class Ej18 {
 		
 		pass2 = br.readLine();
 		//COMPROBAMOS QUE AMBAS PASSWORDS SON IGUALES
-		}while(pass != pass2);
-		
-		
-		
-		
-		
-		
+			
+		if(pass.equals(pass2)) {
+			test = true;
+		}
+		}while(test = false);
+			
 		//AQUI LOCALIZAMOS LA MAYUSCULA Y NUMERO
 		for(int i = 0; i<pass.length(); i++) {
 			//asignamos a letra en cada iteracion el char de pass.
